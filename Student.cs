@@ -10,10 +10,10 @@ namespace StudentClass {
         public Student() {
             Console.WriteLine("Enter the name of student: ");
             this.name = Console.ReadLine();
-            setGrades();
+            setMarks();
         }
 
-        public void setGrades() {
+        public void setMarks() {
             Console.WriteLine("Enter the marks of three subjects: ");
             for(int i = 0; i < marks.Length; i++) {
                 try{
