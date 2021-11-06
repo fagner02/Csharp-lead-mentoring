@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fagne\\Downloads\\filmes\\filmes\\filmes.csproj": {}
+    "C:\\Users\\fagne\\Downloads\\films\\filmes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fagne\\Downloads\\filmes\\filmes\\filmes.csproj": {
+    "C:\\Users\\fagne\\Downloads\\films\\filmes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fagne\\Downloads\\filmes\\filmes\\filmes.csproj",
+        "projectUniqueName": "C:\\Users\\fagne\\Downloads\\films\\filmes.csproj",
         "projectName": "filmes",
-        "projectPath": "C:\\Users\\fagne\\Downloads\\filmes\\filmes\\filmes.csproj",
+        "projectPath": "C:\\Users\\fagne\\Downloads\\films\\filmes.csproj",
         "packagesPath": "C:\\Users\\fagne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fagne\\Downloads\\filmes\\filmes\\obj\\",
+        "outputPath": "C:\\Users\\fagne\\Downloads\\films\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
