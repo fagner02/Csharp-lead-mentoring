@@ -8,6 +8,7 @@ namespace filmes {
 
         static List<Movie> movies = new List<Movie>() {
             new Movie("The Shawshank Redemption", "Adventure", 10, new DateTime(2000, 4, 5), "Frank Darabont", new List<string>{"Nicole Kidman"}, "Crime, Drama", new TimeSpan(2, 56, 0)),
+
             new Movie("Bulsula de ouro", "Adventure", 10, new DateTime(2000, 4, 5), "Frank Darabont", new List<string>{"Nicole Kidman"}, "Crime, Drama", new TimeSpan(2, 40, 0))
         };
 
@@ -19,6 +20,7 @@ namespace filmes {
                 "list-active",
                 "list-deactive",
                 "print-movie",
+                "modify",
                 "exit"
             };
 
@@ -34,6 +36,15 @@ namespace filmes {
                 }
                 if(cmd == "list-active") {
                     archive.printMovies();
+                }
+                if(cmd == "list-deactive") {
+                    archive.printDeactiveMovies();
+                }
+                if(cmd == "print-movie") {
+                    archive.printMovie();
+                }
+                if(cmd == "modify") {
+                    archive.modify();
                 }
             }
 

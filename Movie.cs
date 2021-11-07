@@ -24,7 +24,8 @@ namespace MovieClass {
                 Console.WriteLine('\t'+actor);
             }
             Console.WriteLine("Plot: " + plot);
-            Console.WriteLine("Duration: " + duration.Hours +"h "+ duration.Minutes+"min");
+            Console.WriteLine("Duration: " + duration.TotalMinutes + " minutes");
+            //Console.WriteLine("Duration: " + duration.Hours +"h "+ duration.Minutes+"min");
         }
 
         public Movie(){}

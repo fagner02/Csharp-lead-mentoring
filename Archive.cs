@@ -77,5 +77,52 @@ namespace ArchiveClass {
             movies.Find(x => x.title == title).print();
 
         }
+        public void modify() {
+            Console.WriteLine("Enter the movie you wanna modify: ");
+            string title = Console.ReadLine();
+            if(!movies.Exists(x => x.title == title)) {
+                Console.WriteLine("Movie not found");
+                return;
+            }
+            Console.WriteLine("Enter the new values to modify or just hit enter to kee the old values: ");
+            Movie movie = movies[movies.FindIndex(x => x.title == title)];
+            Console.WriteLine("Enter the new title: ");
+            string newTitle = Console.ReadLine();
+            if(newTitle != ""){movie.title = newTitle;}
+            Console.WriteLine("Enter the new genre: ");
+            string newGenre = Console.ReadLine();
+            if(newGenre != "")movie.genre = newGenre;
+            Console.WriteLine("Enter the new rating: ");
+            try{
+                movie.rating = int.Parse(Console.ReadLine());
+            }catch{}
+            Console.WriteLine("Enter the new date: year, month, day ");
+            try{int year = int.Parse(Console.ReadLine());
+            int month = int.Parse(Console.ReadLine());
+            int day = int.Parse(Console.ReadLine());
+            movie.releaseDate = new DateTime(year, month, day);}catch{}
+            Console.WriteLine("Enter the new director: ");
+            string newDirector = Console.ReadLine();
+            if(newDirector != "")movie.director = newDirector;
+            string input = "";
+            Console.WriteLine("Enter the new actors name and when you're done enter \'done\'");
+            while(input != "done") {
+                if(input == ""){
+                    break;
+                }
+                //Console.WriteLine("Enter actor name: ");
+                input = Console.ReadLine();
+                if(input != "done") {
+                    movie.actors.Add(input);
+                }
+            }
+            Console.WriteLine("Enter the new synopsis: ");
+            string newPlot = Console.ReadLine();
+            movie.plot = newPlot;
+            Console.WriteLine("Enter the new duration: hour, min, sec ");
+            try{int hour = int.Parse(Console.ReadLine());
+            int min = int.Parse(Console.ReadLine());
+            movie.duration = new TimeSpan(hour, min, 0);}catch{}
+        }
     }
 }
