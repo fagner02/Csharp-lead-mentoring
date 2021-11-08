@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "dgSpecHash": "3q9MFg+vRDvt2aRKkznZZpRxPNLeInQ++us708lAnFGwadDxbKiK1J+GVt7CoLxKu87dR0Dl0VKni4p4uFO7EQ==",
@@ -5,4 +6,13 @@
   "projectFilePath": "C:\\Users\\fagne\\Downloads\\films\\filmes.csproj",
   "expectedPackageFiles": [],
   "logs": []
+=======
+{
+  "version": 2,
+  "dgSpecHash": "3q9MFg+vRDvt2aRKkznZZpRxPNLeInQ++us708lAnFGwadDxbKiK1J+GVt7CoLxKu87dR0Dl0VKni4p4uFO7EQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fagne\\Downloads\\films\\filmes.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> d6474aa1613764b4cfcc73c9fb1bcba922a757cf
 }

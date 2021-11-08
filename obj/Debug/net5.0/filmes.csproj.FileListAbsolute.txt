@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.exe
 C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.deps.json
 C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.runtimeconfig.json
@@ -14,3 +15,21 @@ C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.dll
 C:\Users\fagne\Downloads\films\obj\Debug\net5.0\ref\filmes.dll
 C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.pdb
 C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.genruntimeconfig.cache
+=======
+C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.exe
+C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.deps.json
+C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.runtimeconfig.json
+C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.runtimeconfig.dev.json
+C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.dll
+C:\Users\fagne\Downloads\films\bin\Debug\net5.0\ref\filmes.dll
+C:\Users\fagne\Downloads\films\bin\Debug\net5.0\filmes.pdb
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.csproj.AssemblyReference.cache
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.AssemblyInfoInputs.cache
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.AssemblyInfo.cs
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.csproj.CoreCompileInputs.cache
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.dll
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\ref\filmes.dll
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.pdb
+C:\Users\fagne\Downloads\films\obj\Debug\net5.0\filmes.genruntimeconfig.cache
+>>>>>>> d6474aa1613764b4cfcc73c9fb1bcba922a757cf
