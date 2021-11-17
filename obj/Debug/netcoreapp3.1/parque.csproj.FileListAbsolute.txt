@@ -1,0 +1,13 @@
+C:\Users\fagne\Downloads\parque\bin\Debug\netcoreapp3.1\parque.exe
+C:\Users\fagne\Downloads\parque\bin\Debug\netcoreapp3.1\parque.deps.json
+C:\Users\fagne\Downloads\parque\bin\Debug\netcoreapp3.1\parque.runtimeconfig.json
+C:\Users\fagne\Downloads\parque\bin\Debug\netcoreapp3.1\parque.runtimeconfig.dev.json
+C:\Users\fagne\Downloads\parque\bin\Debug\netcoreapp3.1\parque.dll
+C:\Users\fagne\Downloads\parque\bin\Debug\netcoreapp3.1\parque.pdb
+C:\Users\fagne\Downloads\parque\obj\Debug\netcoreapp3.1\parque.csprojAssemblyReference.cache
+C:\Users\fagne\Downloads\parque\obj\Debug\netcoreapp3.1\parque.AssemblyInfoInputs.cache
+C:\Users\fagne\Downloads\parque\obj\Debug\netcoreapp3.1\parque.AssemblyInfo.cs
+C:\Users\fagne\Downloads\parque\obj\Debug\netcoreapp3.1\parque.csproj.CoreCompileInputs.cache
+C:\Users\fagne\Downloads\parque\obj\Debug\netcoreapp3.1\parque.dll
+C:\Users\fagne\Downloads\parque\obj\Debug\netcoreapp3.1\parque.pdb
+C:\Users\fagne\Downloads\parque\obj\Debug\netcoreapp3.1\parque.genruntimeconfig.cache
