@@ -7,7 +7,6 @@ namespace SchoolLib
         public List<Student> students = new List<Student>();
         public List<Professor> professors = new List<Professor>();
         public List<Classroom> classrooms = new List<Classroom>();
-        TimeSpan time = new TimeSpan(0, 0, 0);
         public TimeSpan classDuration = new TimeSpan(0, 30, 0);
         public TimeSpan endTime = new TimeSpan(1, 30, 0);
         public List<Subject> subjects = new List<Subject>();
@@ -21,8 +20,7 @@ namespace SchoolLib
             int age = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter classroom number:");
             Classroom temp = null;
-            int num = 0;
-            int.TryParse(Console.ReadLine(), out num);
+            int.TryParse(Console.ReadLine(), out int num);
             if (!classrooms.Exists(x => x.number == num))
             {
                 Console.WriteLine("Classroom doesn't exist");
@@ -36,10 +34,7 @@ namespace SchoolLib
                 Console.WriteLine("Classroom is full");
                 return;
             }
-            Console.WriteLine("Choose one student schedule");
-            int schPos = 0;
-            int.TryParse(Console.ReadLine(), out schPos);
-            Student stdt = new Student(name, age, temp, studentSchedules[schPos]);
+            Student stdt = new Student(name, age, temp, temp.schedule);
             students.Add(stdt);
         }
 
@@ -48,39 +43,55 @@ namespace SchoolLib
             string name = Console.ReadLine();
             Console.WriteLine("Enter professor age:");
             int age = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter subject");
-            Subject subj = new Subject(Console.ReadLine());
+            Console.WriteLine("Select a subject");
+            string subjectName = "";
+            while(!subjects.Exists(x => x.name == subjectName)){
+                ShowSubjects();
+                Console.WriteLine("Enter subject name:");
+                subjectName = Console.ReadLine();
+            }
+            Subject subject = subjects.Find(x => x.name == subjectName);
+            
             Console.WriteLine("Enter schedule:");
             Dictionary<TimeSpan, Classroom> temp = new Dictionary<TimeSpan, Classroom>();
             TimeSpan time = new TimeSpan(0, 0, 0);
             for(int i = 0; i < 3; i++){
                 Console.WriteLine($"{time}: Enter classroom number");
-                int num = 0;
-                int.TryParse(Console.ReadLine(), out num);
+                int.TryParse(Console.ReadLine(), out int num);
                 Classroom cls = classrooms.Find(x => x.number == num);
                 temp.Add(time, cls);
                 time += classDuration;
             }
-            Professor prof = new Professor(name, subj, temp);
-        }
-        public void updateTime()
-        {
-            time += classDuration;
-            Console.WriteLine(time);
-            foreach (Student s in students)
-            {
-                s.updateTime(classDuration);
-            }
-            foreach (Professor p in professors)
-            {
-                p.updateTime(classDuration);
-            }
+            Professor prof = new Professor(name, subject, temp);
         }
 
-        public void showStudentSchedules(){
+        public void AddClassroom(){
+            Console.WriteLine("Enter classroom number:");
+            int.TryParse(Console.ReadLine(), out int num);
+            Console.WriteLine("Enter classroom capacity:");
+            int cap = int.Parse(Console.ReadLine());
+            Classroom cls = new Classroom(num)
+            {
+                capacity = cap
+            };
+            bool unselected = true;
+            while(unselected){
+                Console.WriteLine("Select a schedule");
+                ShowStudentSchedules();
+                int.TryParse(Console.ReadLine(), out int input);
+                if(input < studentSchedules.Count){
+                    cls.schedule = studentSchedules[input];
+                    unselected = false;
+                }
+            }
+            classrooms.Add(cls);
+        }
+        
+
+        public void ShowStudentSchedules(){
             int i = 0;
             foreach(var x in studentSchedules){
-                Console.WriteLine(i);
+                Console.WriteLine(i + ":");
                 foreach(var y in x){
                     Console.WriteLine(y.Key + " - " + y.Value);
                 }
@@ -89,35 +100,58 @@ namespace SchoolLib
             }
         }
 
-        public void showStudents(){
+        public void ShowStudents(){
             foreach(Student s in students){
                 Console.WriteLine(s.name + " - " + s.age + " - " + s.classroom.number);
             }
         }
 
-        public void showProfessors(){
+        public void ShowProfessors(){
             foreach(Professor p in professors){
-                Console.WriteLine(p.name + " - " + p.age + " - " + p.classroom.number);
+                Console.WriteLine(p.name + " - " + p.age);
             }
         }
 
-        public void showClassrooms(){
+        public void ShowClassrooms(){
+            Console.WriteLine("Number - Capacity");
             foreach(Classroom c in classrooms){
+                
                 Console.WriteLine(c.number + " - " + c.capacity);
             }
         }
-        public Dictionary<TimeSpan, Subject> addStudentSchedule(){
+
+        public void ShowSubjects(){
+            foreach(Subject s in subjects){
+                Console.WriteLine(s.name);
+            }
+        }
+        public void AddStudentSchedule(){
             Dictionary<TimeSpan, Subject> temp = new Dictionary<TimeSpan, Subject>();
             TimeSpan time = new TimeSpan(0, 0, 0);
             for(int i = 0; i < 3; i++){
                 Console.WriteLine(time);
-                Console.WriteLine("Enter subject name:");
-                string name = Console.ReadLine();
-                temp.Add(time, new Subject(name));
+                string subjectName = "";
+                while(!subjects.Exists(x => x.name == subjectName)){
+                    ShowSubjects();
+                    Console.WriteLine("Select a subject:");
+                    subjectName = Console.ReadLine();
+                }
+                temp.Add(time, subjects.Find(x => x.name == subjectName));
                 time += classDuration;
             }
             studentSchedules.Add(temp);
-            return temp;
+        }
+
+        public void AddSubject(){
+            Console.WriteLine("Enter subject name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter subject description:");
+            string description = Console.ReadLine();
+            Subject subject = new Subject(name)
+            {
+                description = description
+            };
+            subjects.Add(subject);
         }
     }
 }
