@@ -7,8 +7,8 @@ namespace SchoolLib
     public class Classroom {
         public int number;
         public int capacity = 45;
-        public Dictionary<TimeSpan, Subject> schedule;
-        public List<Student> students;
+        public Dictionary<TimeSpan, Subject> schedule = new Dictionary<TimeSpan, Subject>();
+        public List<Student> students = new List<Student>();
         public Professor professor = null;
 
         public Classroom(int number) {

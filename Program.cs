@@ -6,11 +6,24 @@ namespace school
 {
     class Program
     {
+        static void Help(){
+            Console.WriteLine("add-student - adds a student to the school");
+            Console.WriteLine("show-students - shows all students");
+            Console.WriteLine("add-professor - adds a professor to the school");
+            Console.WriteLine("show-professors - shows all professors");
+            Console.WriteLine("add-classroom - adds a classroom to the school");
+            Console.WriteLine("show-classrooms - shows all classrooms");
+            Console.WriteLine("add-subject - adds a subject to the school");
+            Console.WriteLine("show-subjects - shows all subjects");
+            Console.WriteLine("add-schedule - adds a schedule to the school");
+            Console.WriteLine("exit - exits the program");
+        } 
         static void Main(string[] args)
         {
             School school = new School();
-            string[] commands = new string[]{ "add-student", "show-students","add-professor", "show-professors", "add-classroom", "show-classrooms", "add-subject", "show-subjects", "exit" };
+            string[] commands = new string[]{ "add-student", "show-students","add-professor", "show-professors", "add-classroom", "show-classrooms", "add-subject", "show-subjects", "add-schedule", "exit", "help" };
             string cmd = "";
+
             while (cmd != "exit")
             {
                 Console.WriteLine("Enter command:");
@@ -18,40 +31,58 @@ namespace school
                 if (cmd == commands[0])
                 {
                     school.AddStudent();
+                    continue;
                 }
                 if (cmd == commands[1])
                 {
                     school.ShowStudents();
+                    continue;
                 }
                 if (cmd == commands[2])
                 {
                     school.AddProfessor();
+                    continue;
                 }
                 if (cmd == commands[3])
                 {
                     school.ShowProfessors();
+                    continue;    
                 }
                 if (cmd == commands[4])
                 {
                     school.AddClassroom();
+                    continue;
                 }
                 if (cmd == commands[5])
                 {
                     school.ShowClassrooms();
+                    continue;
                 }
                 if (cmd == commands[6])
                 {
                     school.AddSubject();
+                    continue;
                 }
                 if (cmd == commands[7])
                 {
                     school.ShowSubjects();
+                    continue;
                 }
-                if (cmd == commands[8])
+                if(cmd == commands[8])
+                {
+                    school.AddStudentSchedule();
+                    continue;
+                }
+                if (cmd == commands[9])
                 {
                     break;
                 }
-
+                if (cmd == commands[10])
+                {
+                    Help();
+                    continue;
+                }
+                Console.WriteLine("Invalid command, run the command 'help' for more info");
             }
             // Classroom class1 = new Classroom(0);
             // Classroom class2 = new Classroom(1);

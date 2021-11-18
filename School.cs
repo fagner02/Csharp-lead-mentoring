@@ -28,7 +28,7 @@ namespace SchoolLib
             }
 
             temp = classrooms.Find(x => x.number == num);
-
+            Console.WriteLine(temp + " " + temp.number);
             if (temp.students.Count >= temp.capacity)
             {
                 Console.WriteLine("Classroom is full");
